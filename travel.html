@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Travel Bucket List </title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <!-- In your <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+<style>
+  .eiffel-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4em;
+    color: #DE7DA6;
+  }
+</style>
+
+
+  <style>
+    body {
+      font-family: 'Quicksand', Arial, sans-serif;
+      background: linear-gradient(120deg, #FFC6E3 0%, #F3E7FF 100%);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #FFC6E3;
+      color: #8B5FC9;
+      padding: 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 16px #e9d6f7;
+    }
+    section {
+      padding: 24px;
+      border-radius: 18px;
+      background: #e9d594;
+      margin: 18px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 20px #FFC6E333;
+    }
+    h1, h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 45px;
+      color: #DE7DA6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #FFF0F8;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 16px;
+      text-align: center;
+      border: none;
+
+    }
+    th {
+      background: #FFDCEE;
+      color: #BA68C8;
+      font-weight: 900;
+    }
+    td {
+      background: #efe9d2;
+      color: #8B5FC9;
+    }
+    img {
+      width: 290px;
+      border-radius: 30px;
+      margin: 12px;
+      box-shadow: 0 2px 10px #e9d6f7;
+      border: 3px solid #FFC6E3;
+      cursor: grab;
+      transition: transform 0.2s;
+    }
+    img:hover {
+      transform: scale(1.08) rotate(-2deg);
+    }
+    .drop-zone {
+      border: 2px dashed #DE7DA6;
+      border-radius: 18px;
+      padding: 28px;
+      background: #FEF6FB;
+      color: #DE7DA6;
+      font-size: 1.15em;
+      margin-top: 24px;
+      text-align: center;
+    }
+    form label {
+      color: #DE7DA6;
+      font-weight: 900;
+      margin-top:10px;
+      display: inline-block;
+    }
+    input, select {
+      border-radius: 10px;
+      border: 1px solid #FFC6E3;
+      padding: 8px;
+      background: #FFF0F8;
+      margin: 5px 0 15px 10px;
+      font-family: 'Quicksand', Arial, sans-serif;
+      color: #BA68C8;
+    }
+    input[type=range] {
+      accent-color: #DE7DA6;
+    }
+    footer {
+      background: #FFC6E3;
+      color: #8B5FC9;
+      text-align: center;
+      padding: 15px;
+      border-top-left-radius: 36px;
+      border-top-right-radius: 36px;
+      font-size: 1.1em;
+      margin-top: 30px;
+    }
+  .pink-btn {
+    background: #FFC6E3; 
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #8B5FC9; 
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+    transition: all 0.2s ease;
+  }
+
+  .pink-btn:hover {
+    background: #F3E7FF; 
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(255, 182, 193, 0.6);
+  }
+
+  .pink-btn:active {
+    transform: scale(0.97);
+    background: #FFB6C1; 
+  }
+  .txt {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4em;
+  font-weight: none;
+  color: #bf2263; 
+}
+header, footer, section, main, article, aside {
+  border-radius: 16px;
+  margin: 16px auto; 
+  background: #FEF6FB; 
+  padding: 14px;
+  box-shadow: 0 3px 8px rgba(222, 125, 166, 0.25);
+  border: 2px solid #DE7DA6; 
+  max-width: 95%; 
+
+
+
+  .comparison-table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    border-collapse: collapse;
+    font-family: 'Quicksand', sans-serif;
+    background: #FFF0F8;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(255, 182, 193, 0.4);
+  }
+
+  .comparison-table th {
+    background: #FFC6E3;
+    color: #8B5FC9;
+    font-weight: bold;
+    padding: 14px;
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  .comparison-table td {
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #FFC6E3;
+    color: #8B5FC9;
+  }
+
+  .comparison-table tr:hover td {
+    background: #FDE6F2;
+  }
+  .pink-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pink-list li {
+  background: #fbe8f4;
+  border: 2px solid #DE7DA6;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+  color: #8B5FC9;
+  box-shadow: 0 3px 8px rgba(222, 125, 166, 0.25);
+  position: relative;
+}
+
+.pink-list li::before {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
+}
+
+/* Two-column layout */
+.two-columns {
+  columns: 2;
+  column-gap: 20px;
+}
+
+.two-columns li {
+  break-inside: avoid;
+}
+
+  
+
+
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 style="font-size: 55px;"> Divina's Travel Bucket List 🎀 </h1>
+  <p style="font-size: 20px;">My Dream Desitinations all in one place</p>
+</header>
+
+<section>
+  <h2>My Top 5 Dream Destinations</h2>
+  <ol>
+    <li class="txt">
+      <button class="pink-btn">New York City, USA</button>
+      <ul>
+        <li>See Times Square at night</li>
+        <li>Visit the Statue of Liberty</li>
+        <li>Walk in Central Park</li>
+      </ul>
+    </li>
+    <li class="txt">
+      <button class="pink-btn">London, UK</button>
+      <ul>
+        <li>Visit Buckingham Palace</li>
+        <li>See the London Eye</li>
+        <li>Explore the British Museum</li>
+      </ul>
+    </li>
+    <li class="txt">
+      <button class="pink-btn">Paris, France</button>
+      <ul>
+        <li>Visit the Eiffel Tower at sunset</li>
+        <li>Explore the Louvre Museum</li>
+        <li>Enjoy a Seine River Cruise</li>
+      </ul>
+    </li>
+    <li class="txt">
+      <button class="pink-btn">Northern Lights</button>
+      <ul>
+        <li>See the Aurora Borealis in Iceland</li>
+        <li>Snowmobiling under the night sky</li>
+        <li>Stay in a glass igloo in Finland</li>
+      </ul>
+    </li>
+    <li class="txt">
+      <button class="pink-btn">Germany</button>
+      <ul>
+        <li>Visit Neuschwanstein Castle</li>
+        <li>Explore Berlin’s history</li>
+        <li>Enjoy Oktoberfest in Munich</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>My Dreamy Travel Checklist </h2>
+  <ul class="pink-list two-columns">
+    <li>Explore Santorini’s blue-domed churches in Greece </li>
+    <li>Go on a desert safari in Dubai </li>
+    <li>See the Northern Lights in Iceland </li>
+    <li>Relax in a hot spring in Japan’s Hakone </li>
+    <li>Enjoy the beaches of Bora Bora </li>
+    <li>Take a road trip along California’s Pacific Coast Highway </li>
+    <li>Hike the Inca Trail to Machu Picchu in Peru </li>
+    <li>Watch the sunrise at Angkor Wat in Cambodia </li>
+    <li>Experience the tulip fields in the Netherlands </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>-- Destination Comparison --</h2>
+  <table class="comparison-table">
+    <tr>
+      <th>Feature</th>
+      <th>Paris, France </th>
+      <th>Maldives 🏝️</th>
+    </tr>
+    <tr>
+      <td>Best Time to Visit</td>
+      <td>April - June 🌸</td>
+      <td>December - April </td>
+    </tr>
+    <tr>
+      <td>Budget</td>
+      <td>$2000</td>
+      <td>$3500</td>
+    </tr>
+    <tr>
+      <td>Rating</td>
+      <td>⭐⭐⭐⭐⭐</td>
+      <td>⭐⭐⭐⭐☆</td>
+    </tr>
+  </table>
+</section>
+<section>
+  <h2>Travel Inspiration </h2>
+  <img src="chillon.jpg" alt="Swiss" draggable="true">
+  <img src="cherry.jpg" alt="Cherry Blossoms in Kyoto" draggable="true">
+  <img src="newyork.jpg" alt="New York City" draggable="true">
+  <img src="london.jpg" alt="london" draggable="true">
+  
+
+  <div class="drop-zone">
+     Drop your favorite dreamy destination image here! 
+  </div>
+</section>
+
+<section>
+  <h2> Plan Your Trip ! </h2>
+  <form>
+    <label for="season">Preferred Travel Season :</label>
+    <select id="season" name="season">
+      <option>Spring 🌸</option>
+      <option>Summer ☀️</option>
+      <option>Autumn 🍁</option>
+      <option>Winter ❄️</option>
+    </select>
+    <br><br>
+
+    <label for="date">Planned Trip Date 📅:</label>
+    <input type="date" id="date" name="date">
+    <br><br>
+
+   <label for="budget">Budget Preference 💰:</label>
+<input type="range" id="budget" name="budget" min="500" max="5000" step="100" value="2000">
+<span id="budgetValue">$2000</span>
+
+<script>
+  const budget = document.getElementById('budget');
+  const budgetValue = document.getElementById('budgetValue');
+
+  budget.addEventListener('input', () => {
+    budgetValue.textContent = '$' + budget.value;
+  });
+</script>
+
+  </form>
+</section>
+
+<section>
+  <h2>Travel Tunes & Videos </h2>
+  <audio controls loop>
+    <source src="Music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <br><br>
+  
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/ORfbeJHAifs" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+</section>
+
+<footer>
+  &copy; Thus the list of all my dream destinations come to end, or not!
+</footer>
+
+</body>
+</html>
